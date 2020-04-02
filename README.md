@@ -52,7 +52,8 @@ systemctl enable nginx
 
 <br>
 <br>
------ The steps below are already completed above but are here for reference purposes -----
+## ----- The steps below are already completed above but are here for reference purposes -----
+<br>
 ### Complete NGINX Config Changes 
 NOTE:  THESE STEPS ARE ALREADY COMPLETED if you "Configured NGINX for NextCloud above") <br>
 If you decide to manually complete the configuration of NGINX, the processes outlined below will Disable the default port 80 site,  enable the use of Sites-Enabled, and modify the pid location for nginx.pid.  
