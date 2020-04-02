@@ -31,9 +31,12 @@ openssl req -new -x509 -days 3650 -nodes -out /etc/nginx/ssl/nextcloud.pem -keyo
 This process will make all changes identified in the following section to "Complete NGINX Config Changes", and also copies a new site to sites-enabled to enable NextCloud.  If you are not installing NextCloud, then remove the /etc/nginx/sites-enabled/nextcloud config file after running the commands below.
 
 ``` bash
-cd /etc
-git clone https://github.com/vcmerritt/nginx
-cp /etc/nginx/nginx.service /lib/systemd/system/nginx.service
+cd ~/
+git clone https://github.com/vcmerritt/nginx_nextcloud.git
+cp nginx_nextcloud/nginx.service /lib/systemd/system/nginx.service
+cp nginx_nextcloud/nginx.conf /etc/nginx/nginx.conf
+cp nginx_nextcloud/sites-enabled/nextcloud /etc/nextcloud/sites-enabled
+cp nginx_nextcloud/sites-available/nextcloud /etc/nextcloud/sites-available
 ```
 
 ### Complete NGINX Config Changes 
