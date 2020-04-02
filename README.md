@@ -37,6 +37,14 @@ cp nginx_nextcloud/nginx.service /lib/systemd/system/nginx.service
 cp nginx_nextcloud/nginx.conf /etc/nginx/nginx.conf
 cp nginx_nextcloud/sites-enabled/nextcloud /etc/nginx/sites-enabled
 cp nginx_nextcloud/sites-available/nextcloud /etc/nginx/sites-available
+
+#Edit /etc/nginx/sites-available/nextcloud and set the Nextcloud server IP to the IP of the local system or 127.0.0.1
+vi /etc/nginx/sites-available/nextcloud
+upstream NextCloud {
+  server 127.0.0.1:80;  ### CHANGE THIS LINE TO BE THE CORRECT IP!
+}
+
+
 ```
 
 ### Complete NGINX Config Changes 
