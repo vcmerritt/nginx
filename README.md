@@ -70,7 +70,7 @@ If you decide to manually complete the configuration of NGINX, the processes out
   add         include /etc/nginx/sites-enabled/*; to the end of the file
 ```
 
-  ##### create /lib/systemd/system/nginx.service and add the following contents
+  ##### Create /lib/systemd/system/nginx.service and add the following contents
   ``` bash
   #NGINX INIT SCRIPT for /lib/systemd/system/nginx.service
 
