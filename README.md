@@ -35,8 +35,8 @@ cd ~/
 git clone https://github.com/vcmerritt/nginx_nextcloud.git
 cp nginx_nextcloud/nginx.service /lib/systemd/system/nginx.service
 cp nginx_nextcloud/nginx.conf /etc/nginx/nginx.conf
-cp nginx_nextcloud/sites-enabled/nextcloud /etc/nextcloud/sites-enabled
-cp nginx_nextcloud/sites-available/nextcloud /etc/nextcloud/sites-available
+cp nginx_nextcloud/sites-enabled/nextcloud /etc/nginx/sites-enabled
+cp nginx_nextcloud/sites-available/nextcloud /etc/nginx/sites-available
 ```
 
 ### Complete NGINX Config Changes 
