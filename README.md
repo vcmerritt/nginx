@@ -44,6 +44,9 @@ upstream NextCloud {
   server 127.0.0.1:80;  ### CHANGE THIS LINE TO BE THE CORRECT IP!
 }
 
+#restart NGINX
+systemctl restart nginx
+systemctl enable nginx
 
 ```
 
