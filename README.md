@@ -49,6 +49,9 @@ systemctl restart nginx
 systemctl enable nginx
 
 ```
+
+<br>
+<br>
 ----- The steps below are already completed above but are here for reference purposes -----
 ### Complete NGINX Config Changes 
 NOTE:  THESE STEPS ARE ALREADY COMPLETED if you "Configured NGINX for NextCloud above") <br>
