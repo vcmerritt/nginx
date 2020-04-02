@@ -1,4 +1,4 @@
-# nginx
+# Installing NGINX from Source
 
 To install NGINX execute the following commands:
 
