@@ -4,7 +4,7 @@ To install NGINX execute the following commands:
 
 ``` bash
 cd ~/
-apt-get install libpam-dev libpcre3-dev gcc make libssl-dev zlib1g-dev/stable git libxml2 libxml2-dev  libxslt1-dev
+apt-get install libpam-dev libpcre3-dev gcc make libssl-dev zlib1g-dev/stable git libxml2 libxml2-dev  libxslt1-dev -y
 git clone https://github.com/vcmerritt/nginx-ldap-auth.git
 git clone https://github.com/vcmerritt/nginx_http_auth_pam_module.git
 git clone https://github.com/vcmerritt/nginx-websockify-module.git
