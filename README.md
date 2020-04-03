@@ -51,11 +51,13 @@ upstream NextCloud {
 systemctl restart nginx
 systemctl enable nginx
 
+#restart the LibreOffice Online Server (This must be done or you will not be able to edit documents).
+systemctl restart loolwsd
 ```
 
 <br>
 <br>
-
+-----------------------------  DO NOT COMPLETE THIS IS ONLY FOR REFERENCE BELOW THIS LINE ----------------------------------------
 ## The steps below are already completed above but are here for reference purposes
 NOTE:  THESE STEPS ARE ALREADY COMPLETED if you "Configured NGINX for NextCloud above") <br>
 If you decide to manually complete the configuration of NGINX, the processes outlined below will Disable the default port 80 site,  enable the use of Sites-Enabled, and modify the pid location for nginx.pid.  
