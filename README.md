@@ -38,6 +38,9 @@ cp nginx_nextcloud/nginx.conf /etc/nginx/nginx.conf
 cp nginx_nextcloud/sites-enabled/nextcloud /etc/nginx/sites-enabled
 cp nginx_nextcloud/sites-available/nextcloud /etc/nginx/sites-available
 
+#If you installed LibreOffice Online Server then copy this file to ensure that it works.
+cp nginx_nextcloud/loolwsd.xml /etc/loolwsd
+
 #Edit /etc/nginx/sites-available/nextcloud and set the Nextcloud server IP to the IP of the local system or 127.0.0.1
 vi /etc/nginx/sites-available/nextcloud
 upstream NextCloud {
