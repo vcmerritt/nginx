@@ -68,7 +68,7 @@ firewalld-cmd --add-port 443/tcp --permanent
 
 <br>
 
-**NOTE:  THESE STEPS ARE ALREADY COMPLETED if you "Configured NGINX for NextCloud above")**
+**NOTE:  THE STEPS BELOW ARE ALREADY COMPLETED if you "Configured NGINX for NextCloud" above**
 
 <br>
 
