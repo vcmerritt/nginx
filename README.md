@@ -61,9 +61,9 @@ systemctl restart loolwsd
 Install the firewall and configure it to only allow port 443 so that only https is permitted.   Port 80 and the other ports will be blocked after the configuration is performed, except for port 443, and port 22 (ssh) which is added by default.
 ``` bash
 apt-get install iptables
-iptables -A INPUT -j DROP
-iptables -A FORWARD -j DROP
-iptables -A OUTPUT -j ACCEPT
+iptables -P INPUT -j DROP
+iptables -P FORWARD -j DROP
+iptables -P OUTPUT -j ACCEPT
 iptables -A INPUT -p tcp --dport 443 -j ACCEPT
 ```
 
