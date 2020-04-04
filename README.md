@@ -68,11 +68,14 @@ firewalld-cmd --add-port 443/tcp --permanent
 
 <br>
 
-**NOTE:  THE STEPS BELOW ARE ALREADY COMPLETED if you "Configured NGINX for NextCloud" above**
+**THE STEPS BELOW ARE ALREADY COMPLETED if you "Configured NGINX for NextCloud" above**
+
 
 <br>
 
-If you decide to manually complete the configuration of NGINX, the processes outlined below will Disable the default port 80 site,  enable the use of Sites-Enabled, and modify the pid location for nginx.pid.  
+The changes listed below provide an overview of the changes made in the default configuration files that were copied as part of the previous steps performed.
+
+<br>
 
 #### Open /etc/nginx/nginx.conf and make the following changes
 ``` bash
