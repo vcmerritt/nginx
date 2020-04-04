@@ -11,9 +11,9 @@ git clone https://github.com/vcmerritt/nginx-websockify-module.git
 git clone https://github.com/vcmerritt/nginx_devel_kit.git
 git clone https://github.com/vcmerritt/nginx_cache_purge.git
 git clone https://github.com/vcmerritt/nginx-dav-ext-module.git
-wget clone https://nginx.org/download/nginx-1.17.8.tar.gz
-tar -zxvf nginx-1.17.8.tar.gz
-cd  nginx-1.17.8
+wget http://nginx.org/download/nginx-1.17.9.tar.gz
+tar -zxvf nginx-1.17.9.tar.gz
+cd  nginx-1.17.9
 ./configure --prefix=/usr --conf-path=/etc/nginx/nginx.conf --modules-path=/etc/nginx/modules/ --add-dynamic-module=/root/nginx_http_auth_pam_module/ --with-http_v2_module --with-http_realip_module --with-http_gzip_static_module --with-http_auth_request_module --with-http_gunzip_module --with-http_ssl_module  --with-stream_ssl_module --with-threads --with-stream --error-log-path=/var/log/nginx/error.log --http-log-path=/var/log/nginx/access.log --with-http_secure_link_module --with-debug --add-dynamic-module=/root/nginx-websockify-module --add-dynamic-module=/root/nginx_devel_kit --add-module=/root/nginx_cache_purge --with-http_dav_module --add-module=/root/nginx-dav-ext-module
 make
 make install
