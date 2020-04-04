@@ -62,7 +62,7 @@ Install the firewall and configure it to only allow port 443 so that only https 
 ``` bash
 apt-get install iptables iptables-persistent -y
 iptables -A INPUT -i lo -j ACCEPT
-iptables -A INPUT -m state --state NEW -p udp --dport 443 -j ACCEPT
+iptables -A INPUT -m state --state NEW -p udp -j ACCEPT
 iptables -A INPUT -m state --state NEW -p tcp --dport 443 -j ACCEPT
 iptables -A INPUT -m state --state NEW -p tcp --dport 22 -j ACCEPT
 iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
