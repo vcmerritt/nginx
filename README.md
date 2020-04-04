@@ -64,7 +64,7 @@ apt-get install iptables
 iptables -A INPUT -j DROP
 iptables -A FORWARD -j DROP
 iptables -A OUTPUT -j ACCEPT
-iptables -A INPUT --dport 443 -p tcp -j ACCEPT
+iptables -A INPUT -p tcp --dport 443 -j ACCEPT
 ```
 
 <br>
