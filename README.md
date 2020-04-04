@@ -56,11 +56,12 @@ systemctl restart loolwsd
 ```
 
 <br>
-<br>
+
 # Install and Configure Firewall
+``` bash
 apt-get install firewalld
 firewalld-cmd --add-port 443/tcp --permanent
-
+```
 -----------------------------   THIS IS ONLY FOR REFERENCE BELOW THIS LINE ----------------------------------------
 ## The steps below are already completed above but are here for reference purposes
 NOTE:  THESE STEPS ARE ALREADY COMPLETED if you "Configured NGINX for NextCloud above") <br>
