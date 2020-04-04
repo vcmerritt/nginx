@@ -57,6 +57,17 @@ systemctl restart loolwsd
 
 <br>
 
+# Force NextCloud SSL
+
+``` bash
+nano /var/www/html/nextcloud/config/config.php
+
+#Add the following two lines to the file - careful to use the existing lines as examples so as not to break something.
+'forcessl' => true,
+'forceSSLforSubdomains' => true,
+
+```
+
 # Install and Configure Firewall
 Install the firewall and configure it to only allow port 443 so that only https is permitted.   Port 80 and the other ports will be blocked after the configuration is performed, except for port 443, and port 22 (ssh) which is added by default.
 ``` bash
