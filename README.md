@@ -66,6 +66,12 @@ nano /var/www/html/nextcloud/config/config.php
 'forcessl' => true,
 'forceSSLforSubdomains' => true,
 
+#Edit the .htaccess file in /var/www/html/nextcloud and add the lines below right under Rewrite On
+nano /var/www/html/nextcloud/.htaccess
+
+RewriteCond %{SERVER_PORT} !443
+RewriteRule ^(/(.*))?$ https://%{HTTP_HOST}/$1 [R=301,L]
+
 ```
 
 # Install and Configure Firewall
