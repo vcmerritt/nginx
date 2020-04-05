@@ -60,12 +60,6 @@ systemctl restart loolwsd
 # Force NextCloud SSL
 
 ``` bash
-nano /var/www/html/nextcloud/config/config.php
-
-#Add the following two lines to the file - careful to use the existing lines as examples so as not to break something.
-'forcessl' => true,
-'forceSSLforSubdomains' => true,
-
 #Edit the .htaccess file in /var/www/html/nextcloud and add the lines below right under Rewrite On
 nano /var/www/html/nextcloud/.htaccess
 
