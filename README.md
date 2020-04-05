@@ -63,7 +63,7 @@ systemctl restart loolwsd
 #Edit the .htaccess file in /var/www/html/nextcloud and add the lines below right under Rewrite On
 nano /var/www/html/nextcloud/config/config.php    # Add the following lines right after the datadirectory path.
   
-  'overwrite.cli.url' => 'https://YourIPorFullServerName:443',       
+  'overwrite.cli.url' => 'https://YourIPorFullServerName',       
   'overwriteprotocol' => 'https',
 
 
