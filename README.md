@@ -101,6 +101,8 @@ https://IPorHostnameofNextCloudServer/nextcloud/         #Make sure you add  the
 
 ## Add Collabora App in NextCloud
 Navigate to Apps, and add the Collabora Online Server component to nextcloud.  After you have added the extension to NextCloud, then go to settings for the Collabora server, and configure the URL to: <br>
+<br>
+
 https://IPorHostnameofNextCloudServer
 
 <br>
