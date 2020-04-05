@@ -107,6 +107,8 @@ https://IPorHostnameofNextCloudServer
 Note:  Don't forget to select the checkbox immediately below the URL in settings to trust certificates if you are using a self-signed certificate.
 <br>
 <br>
+<br>
+<br>
 -----------------------------   THIS IS ONLY FOR REFERENCE BELOW THIS LINE ----------------------------------------
 
 <br>
