@@ -69,7 +69,7 @@ nano /var/www/html/nextcloud/config/config.php    # Add the following lines righ
 #Create a default index.html file that redirects to NextCloud via SSL
 cat <<EOF > /var/www/html/index.html
 <script>
-window.location = "https://192.168.2.173/nextcloud/";
+window.location = "https://IPorHostNameofNextCloudServer/nextcloud/";
 </script>
 EOF
 
@@ -87,6 +87,13 @@ iptables -A INPUT -p tcp --dport 443 -j ACCEPT
 iptables -A INPUT -p tcp -j DROP
 iptables-save > /etc/iptables/rules.v4
 ```
+
+## Test the NextCloud Server Installation
+To test the server installation and ensure you are using SSL, open a web browser and navigate to:
+
+https://IPorHostnameofNextCloudServer
+or
+https://IPorHostnameofNextCloudServer/nextcloud/         #Make sure you add  the trailing /
 
 <br>
 <br>
