@@ -67,9 +67,10 @@ nano /var/www/html/nextcloud/config/config.php    # Add the following lines righ
   'overwriteprotocol' => 'https',
 
 #Create a default index.html file that redirects to NextCloud via SSL
+#MAKE SURE THAT YOU CHANGE THE IPorHOSTNAMEofNextCloudServer to the correct IP
 cat <<EOF > /var/www/html/index.html
 <script>
-window.location = "https://IPorHostNameofNextCloudServer/nextcloud/";
+window.location = "https://IPorHostNameofNextCloudServer/nextcloud/";   
 </script>
 EOF
 
