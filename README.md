@@ -91,9 +91,11 @@ iptables-save > /etc/iptables/rules.v4
 ## Test the NextCloud Server Installation
 To test the server installation and ensure you are using SSL, open a web browser and navigate to:
 
+``` HTML
 https://IPorHostnameofNextCloudServer
 or
 https://IPorHostnameofNextCloudServer/nextcloud/         #Make sure you add  the trailing /
+```
 
 <br>
 <br>
