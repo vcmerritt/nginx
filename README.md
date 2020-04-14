@@ -123,7 +123,7 @@ Note:  Don't forget to select the checkbox immediately below the URL in settings
 5)  Enter the following:
      Server:   ``` ldaps://sambadc01.mydomain.com   Port:  636 ```  <br>
      USER DN:  ``` CN=svc_nextcloud,OU=Users,OU=MYHQ,DC=mydomain,DC=com ```  <br>
-     PASSWORD:  Password for user   <br>
+     PASSWORD:  ``` Password for user ``` <br>
      One Base DN Per Line:  <br>
      ```
                 OU=Users,OU=MYHQ,DC=mydomain,DC=com
