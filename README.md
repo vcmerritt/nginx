@@ -116,6 +116,14 @@ Note:  Don't forget to select the checkbox immediately below the URL in settings
 4)  Go to folders, create a new document and test the Collabora Online functionality.
 
 ## Configure LDAPS Integration for NextCloud
+``` bash
+# Login to the server via Putty to fix the LDAP Groups issue as there is a bug in the Access.php shipped with NextCloud 18.02
+cd /var/www/html/nextcloud/apps/user_ldap/lib
+mv Access.php Access.php.bak
+wget https://raw.githubusercontent.com/nextcloud/server/5bf3d1bb384da56adbf205752be8f840aac3b0c5/apps/user_ldap/lib/Access.php
+```
+
+#From within NextCloud configure the following:
 1)  Login to NextCloud as the nextadmin account
 2)  Select Apps, and choose Disabled Apps
 3)  Enable and Download LDAP / AD Integration 
