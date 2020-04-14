@@ -131,15 +131,15 @@ Note:  Don't forget to select the checkbox immediately below the URL in settings
                 OU=Users,OU=MYHQ,DC=mydomain,DC=com
                 OU=Admins,OU=MYHQ,DC=mydomain,DC=com
      ```
-6a)  (IF USING WINDOWS DOMAIN CONTROLLERS) - Select the Login Attributes Tab, and edit the LDAP Filter to add the following:
+6a)  (IF USING WINDOWS DOMAIN CONTROLLERS) - Select the Login Attributes Tab, and edit the LDAP Filter to add the following: <br>
      ```
     (&(|(objectclass=person))(|(samaccountname=%uid)(|(mailPrimaryAddress=%uid)(mail=%uid))(|(memberOf=%uid))))
      ```
-6b)  (IF USING SAMBA DOMAIN CONTROLLERS) - Select the Login Attributes Tab, and edit the LDAP Filter to add the following:
+6b)  (IF USING SAMBA DOMAIN CONTROLLERS) - Select the Login Attributes Tab, and edit the LDAP Filter to add the following: <br> 
      ```
      (&(|(objectclass=person))(|(samaccountname=%uid)(|(mailPrimaryAddress=%uid)(mail=%uid))(|(primaryGroupID=%uid))))
      ```
-7)  Select Groups Tab, and edit the LDAP Filter to add the following:
+7)  Select Groups Tab, and edit the LDAP Filter to add the following: <br>
      ```
     (&(|(objectclass=organizationalPerson)(objectclass=organizationalUnit)(objectclass=person)(objectclass=top)(objectclass=user))(|(cn=Next_*)))
      ```
