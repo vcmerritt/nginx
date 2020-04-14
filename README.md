@@ -133,7 +133,7 @@ Note:  Don't forget to select the checkbox immediately below the URL in settings
      ``` 
      <br>
 6a)  With Windows Domain Controllers - Select the Login Attributes Tab, and edit the LDAP Filter to add the following: <br>
-     (&(|(objectclass=person))(|(samaccountname=%uid)(|(mailPrimaryAddress=%uid)(mail=%uid))(|(memberOf=%uid))))
+     ``` (&(|(objectclass=person))(|(samaccountname=%uid)(|(mailPrimaryAddress=%uid)(mail=%uid))(|(memberOf=%uid)))) ```
      
 6b)  With SAMBA Domain Controllers - Select the Login Attributes Tab, and edit the LDAP Filter to add the following: <br> 
      (&(|(objectclass=person))(|(samaccountname=%uid)(|(mailPrimaryAddress=%uid)(mail=%uid))(|(primaryGroupID=%uid))))
