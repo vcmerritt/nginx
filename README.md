@@ -133,17 +133,16 @@ You must create the __svc_nextcloud__ user accont and the (__OU=Users,OU=MYHQ,DC
                 OU=Users,OU=MYHQ,DC=mydomain,DC=com
                 OU=Admins,OU=MYHQ,DC=mydomain,DC=com
      ``` 
-     <br>
-6a)  With Windows Domain Controllers - Select the Login Attributes Tab, and edit the LDAP Filter to add the following: <br>
+6)  With Windows Domain Controllers - Select the Login Attributes Tab, and edit the LDAP Filter to add the following: 
      ```     (&(|(objectclass=person))(|(samaccountname=%uid)(|(mailPrimaryAddress=%uid)(mail=%uid))(|(memberOf=%uid)))) ``` 
      
-6b)  With SAMBA Domain Controllers - Select the Login Attributes Tab, and edit the LDAP Filter to add the following: <br> 
+7)  With SAMBA Domain Controllers - Select the Login Attributes Tab, and edit the LDAP Filter to add the following: 
      ```     (&(|(objectclass=person))(|(samaccountname=%uid)(|(mailPrimaryAddress=%uid)(mail=%uid))(|(primaryGroupID=%uid)))) ```
 
-7)  Select Groups Tab, and edit the LDAP Filter to add the following: <br>
+8)  Select Groups Tab, and edit the LDAP Filter to add the following: <br>
      ```     (&(|(objectclass=organizationalPerson)(objectclass=organizationalUnit)(objectclass=person)(objectclass=top)(objectclass=user))(|(cn=Next_*))) ```  
      
   
-     __Note:__  Using the filter in step 7 above, only groups that begin with Next_ will appear as valid groups in NextCloud.
+     __Note:__  Using the filter in step 8 above, only groups that begin with Next_ will appear as valid groups in NextCloud.
 <br>
 <br>
