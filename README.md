@@ -121,16 +121,22 @@ Note:  Don't forget to select the checkbox immediately below the URL in settings
 3)  Enable and Download LDAP / AD Integration 
 4)  Select Settings -->  LDAP / AD Integration
 5)  Enter the following:
-     Server:   ldaps://sambadc01.testdomain.com   Port:  636
-     USER DN:  CN=svc_nextcloud,OU=Users,OU=MYHQ,DC=testdomain,DC=com
+     Server:   ``` ldaps://sambadc01.testdomain.com   Port:  636 ```
+     USER DN:  ``` CN=svc_nextcloud,OU=Users,OU=MYHQ,DC=testdomain,DC=com ```
      PASSWORD:  Password for user
-     One Base DN Per Line:   
+     One Base DN Per Line:
+     ```
                 OU=Users,OU=MYHQ,DC=testdomain,DC=com
                 OU=Admins,OU=MYHQ,DC=testdomain,DC=com
+     ```
 6)  Select Users Tab, and edit the LDAP Filter to add the following:
+    ```
     (&(|(objectclass=person))(|(samaccountname=%uid)(|(mailPrimaryAddress=%uid)(mail=%uid))(|(memberOf=%uid))))
+    ```
 7)  Select Groups Tab, and edit the LDAP Filter to add the following:
+    ```
     (&(|(objectclass=organizationalPerson)(objectclass=organizationalUnit)(objectclass=person)(objectclass=top)(objectclass=user))(|(cn=Next_*)))
+    ```
      Note:  Using the filter in step 7 above, only groups that begin with Next_ will appear as valid groups in NextCloud.
 <br>
 <br>
