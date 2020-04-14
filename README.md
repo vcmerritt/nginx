@@ -130,25 +130,26 @@ Note:  Don't forget to select the checkbox immediately below the URL in settings
      ```
                 OU=Users,OU=MYHQ,DC=mydomain,DC=com
                 OU=Admins,OU=MYHQ,DC=mydomain,DC=com
-     ```  <br>
+     ``` 
+     <br>
 6a)  With Windows Domain Controllers - Select the Login Attributes Tab, and edit the LDAP Filter to add the following: <br>
      ```
-     
        (&(|(objectclass=person))(|(samaccountname=%uid)(|(mailPrimaryAddress=%uid)(mail=%uid))(|(memberOf=%uid))))
        
-     ```  <br>
+     ```  
+     <br>
 6b)  With SAMBA Domain Controllers - Select the Login Attributes Tab, and edit the LDAP Filter to add the following: <br> 
      ```
-     
        (&(|(objectclass=person))(|(samaccountname=%uid)(|(mailPrimaryAddress=%uid)(mail=%uid))(|(primaryGroupID=%uid))))
        
-     ```  <br>
+     ``` 
+     <br>
 7)  Select Groups Tab, and edit the LDAP Filter to add the following: <br>
      ```
-     
        (&(|(objectclass=organizationalPerson)(objectclass=organizationalUnit)(objectclass=person)(objectclass=top)(objectclass=user))(|(cn=Next_*)))
        
-     ```  <br>
+     ``` 
+     <br>
      <br> 
      Note:  Using the filter in step 7 above, only groups that begin with Next_ will appear as valid groups in NextCloud.
 <br>
