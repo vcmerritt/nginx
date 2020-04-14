@@ -118,6 +118,7 @@ Note:  Don't forget to select the checkbox immediately below the URL in settings
 ## Configure LDAPS Integration for NextCloud
 
 ### From within NextCloud configure the following:
+(YOU MUST CREATE THE USER svc_nextcloud and the (OU=Users,OU=MYHQ,DC=mydomain,DC=com) (OU=Groups,OU=MYHQ,DC=mydomain,DC=com) (OU=Admins,OU=MYHQ,DC=mydomain,DC=com) Organizational Units prior to completing these steps)
 1)  Login to NextCloud as the nextadmin account <br>
 2)  Select Apps, and choose Disabled Apps <br>
 3)  Enable and Download LDAP / AD Integration  <br>
