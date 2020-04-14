@@ -133,10 +133,10 @@ You must create the __svc_nextcloud__ user accont and the (__OU=Users,OU=MYHQ,DC
                 OU=Users,OU=MYHQ,DC=mydomain,DC=com
                 OU=Admins,OU=MYHQ,DC=mydomain,DC=com
      ``` 
-6)  With Windows Domain Controllers - Select the Login Attributes Tab, and edit the LDAP Filter to add the following: 
+6)  With __Windows Domain Controllers__ - Select the Login Attributes Tab, and edit the LDAP Filter to add the following: 
      ```     (&(|(objectclass=person))(|(samaccountname=%uid)(|(mailPrimaryAddress=%uid)(mail=%uid))(|(memberOf=%uid)))) ``` 
      
-7)  With SAMBA Domain Controllers - Select the Login Attributes Tab, and edit the LDAP Filter to add the following: 
+7)  With __SAMBA Domain Controllers__ - Select the Login Attributes Tab, and edit the LDAP Filter to add the following: 
      ```     (&(|(objectclass=person))(|(samaccountname=%uid)(|(mailPrimaryAddress=%uid)(mail=%uid))(|(primaryGroupID=%uid)))) ```
 
 8)  Select Groups Tab, and edit the LDAP Filter to add the following: <br>
