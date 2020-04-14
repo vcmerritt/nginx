@@ -118,11 +118,11 @@ Note:  Don't forget to select the checkbox immediately below the URL in settings
 ## Configure LDAPS Integration for NextCloud
 
 ### From within NextCloud configure the following:
-1)  Login to NextCloud as the nextadmin account
-2)  Select Apps, and choose Disabled Apps
-3)  Enable and Download LDAP / AD Integration 
-4)  Select Settings -->  LDAP / AD Integration
-5)  Enter the following:
+1)  Login to NextCloud as the nextadmin account <br>
+2)  Select Apps, and choose Disabled Apps <br>
+3)  Enable and Download LDAP / AD Integration  <br>
+4)  Select Settings -->  LDAP / AD Integration <br>
+5)  Enter the following: <br>
      Server:   ``` ldaps://sambadc01.mydomain.com   Port:  636 ```  <br>
      USER DN:  ``` CN=svc_nextcloud,OU=Users,OU=MYHQ,DC=mydomain,DC=com ```  <br>
      PASSWORD:  ``` Password for user ``` <br>
@@ -130,19 +130,19 @@ Note:  Don't forget to select the checkbox immediately below the URL in settings
      ```
                 OU=Users,OU=MYHQ,DC=mydomain,DC=com
                 OU=Admins,OU=MYHQ,DC=mydomain,DC=com
-     ```
+     ```  <br>
 6a)  (IF USING WINDOWS DOMAIN CONTROLLERS) - Select the Login Attributes Tab, and edit the LDAP Filter to add the following: <br>
      ```
     (&(|(objectclass=person))(|(samaccountname=%uid)(|(mailPrimaryAddress=%uid)(mail=%uid))(|(memberOf=%uid))))
-     ```
+     ```  <br>
 6b)  (IF USING SAMBA DOMAIN CONTROLLERS) - Select the Login Attributes Tab, and edit the LDAP Filter to add the following: <br> 
      ```
      (&(|(objectclass=person))(|(samaccountname=%uid)(|(mailPrimaryAddress=%uid)(mail=%uid))(|(primaryGroupID=%uid))))
-     ```
+     ```  <br>
 7)  Select Groups Tab, and edit the LDAP Filter to add the following: <br>
      ```
     (&(|(objectclass=organizationalPerson)(objectclass=organizationalUnit)(objectclass=person)(objectclass=top)(objectclass=user))(|(cn=Next_*)))
-     ```
+     ```  <br>
      Note:  Using the filter in step 7 above, only groups that begin with Next_ will appear as valid groups in NextCloud.
 <br>
 <br>
