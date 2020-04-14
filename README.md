@@ -108,6 +108,30 @@ https://IPorHostnameofNextCloudServer
 
 <br>
 Note:  Don't forget to select the checkbox immediately below the URL in settings to trust certificates if you are using a self-signed certificate.
+
+## Add Collabora Online App to Nextcloud
+1)  Login to NextCloud as the nextadmin account
+2)  Select Apps, and Add the Collabora Online application
+3)  Select Settings --> Collabora Online and enter https://IPorNameofNextCloudServer
+4)  Go to folders, create a new document and test the Collabora Online functionality.
+
+## Configure LDAPS Integration for NextCloud
+1)  Login to NextCloud as the nextadmin account
+2)  Select Apps, and choose Disabled Apps
+3)  Enable and Download LDAP / AD Integration 
+4)  Select Settings -->  LDAP / AD Integration
+5)  Enter the following:
+     Server:   ldaps://sambadc01.testdomain.com   Port:  636
+     USER DN:  CN=svc_nextcloud,OU=Users,OU=MYHQ,DC=testdomain,DC=com
+     PASSWORD:  Password for user
+     One Base DN Per Line:   
+                OU=Users,OU=MYHQ,DC=testdomain,DC=com
+                OU=Admins,OU=MYHQ,DC=testdomain,DC=com
+6)  Select Users Tab, and edit the LDAP Filter to add the following:
+    (&(|(objectclass=person))(|(samaccountname=%uid)(|(mailPrimaryAddress=%uid)(mail=%uid))(|(memberOf=%uid))))
+7)  Select Groups Tab, and edit the LDAP Filter to add the following:
+    (&(|(objectclass=organizationalPerson)(objectclass=organizationalUnit)(objectclass=person)(objectclass=top)(objectclass=user))(|(cn=Next_*)))
+     Note:  Using the filter in step 7 above, only groups that begin with Next_ will appear as valid groups in NextCloud.
 <br>
 <br>
 <br>
