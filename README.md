@@ -138,7 +138,7 @@ You must create the __svc_nextcloud__ user accont and the (__OU=Users,OU=MYHQ,DC
      ```     (&(|(objectclass=person))(|(samaccountname=%uid)(|(mailPrimaryAddress=%uid)(mail=%uid))(|(memberOf=%uid)))) ``` 
      
 6b)  With SAMBA Domain Controllers - Select the Login Attributes Tab, and edit the LDAP Filter to add the following: <br> 
-     ```     (&(|(objectclass=person))(|(samaccountname=%uid)(|(mailPrimaryAddress=%uid)(mail=%uid))(|(primaryGroupID=%uid)))) ``` 
+     ```     (&(|(objectclass=person))(|(samaccountname=%uid)(|(mailPrimaryAddress=%uid)(mail=%uid))(|(primaryGroupID=%uid)))) ```
 
 7)  Select Groups Tab, and edit the LDAP Filter to add the following: <br>
      ```     (&(|(objectclass=organizationalPerson)(objectclass=organizationalUnit)(objectclass=person)(objectclass=top)(objectclass=user))(|(cn=Next_*))) ```  
