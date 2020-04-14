@@ -142,7 +142,7 @@ Note:  Don't forget to select the checkbox immediately below the URL in settings
      ```     (&(|(objectclass=organizationalPerson)(objectclass=organizationalUnit)(objectclass=person)(objectclass=top)(objectclass=user))(|(cn=Next_*))) ```  
      
   
-     Note:  Using the filter in step 7 above, only groups that begin with Next_ will appear as valid groups in NextCloud.
+     __Note:__  Using the filter in step 7 above, only groups that begin with Next_ will appear as valid groups in NextCloud.
 <br>
 <br>
 <br>
