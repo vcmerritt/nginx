@@ -121,13 +121,13 @@ Note:  Don't forget to select the checkbox immediately below the URL in settings
 3)  Enable and Download LDAP / AD Integration 
 4)  Select Settings -->  LDAP / AD Integration
 5)  Enter the following:
-     Server:   ``` ldaps://sambadc01.testdomain.com   Port:  636 ```  <br>
-     USER DN:  ``` CN=svc_nextcloud,OU=Users,OU=MYHQ,DC=testdomain,DC=com ```  <br>
+     Server:   ``` ldaps://sambadc01.mydomain.com   Port:  636 ```  <br>
+     USER DN:  ``` CN=svc_nextcloud,OU=Users,OU=MYHQ,DC=mydomain,DC=com ```  <br>
      PASSWORD:  Password for user   <br>
      One Base DN Per Line:  <br>
      ```
-                OU=Users,OU=MYHQ,DC=testdomain,DC=com
-                OU=Admins,OU=MYHQ,DC=testdomain,DC=com
+                OU=Users,OU=MYHQ,DC=mydomain,DC=com
+                OU=Admins,OU=MYHQ,DC=mydomain,DC=com
      ```
 6)  Select Users Tab, and edit the LDAP Filter to add the following:
     ```
