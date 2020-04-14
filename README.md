@@ -129,7 +129,7 @@ Note:  Don't forget to select the checkbox immediately below the URL in settings
                 OU=Users,OU=MYHQ,DC=mydomain,DC=com
                 OU=Admins,OU=MYHQ,DC=mydomain,DC=com
      ```
-6)  Select Users Tab, and edit the LDAP Filter to add the following:
+6)  Select the Login Attributes Tab, and edit the LDAP Filter to add the following:
     ```
     (&(|(objectclass=person))(|(samaccountname=%uid)(|(mailPrimaryAddress=%uid)(mail=%uid))(|(memberOf=%uid))))
     ```
