@@ -72,7 +72,7 @@ NOTE:  The sed command above modify the following statements in /var/www/html/ne
 #MAKE SURE THAT YOU CHANGE THE IPorHOSTNAMEofNextCloudServer to the correct IP
 cat <<EOF > /var/www/html/index.html
 <script>
-window.location = "https://nextcloud.mydomain.com/nextcloud/";   
+window.location = "https://nextcloud01.mydomain.com/nextcloud/";   
 </script>
 EOF
 
