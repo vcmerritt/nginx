@@ -134,12 +134,13 @@ https://ValidWOPIURLfromAbove  (ie. https://nextcloud01.mydomain.com  )
 Note:  Don't forget to select the checkbox immediately below the URL in settings to trust certificates if you are using a self-signed certificate.
 
 4)  Go to folders, create a new document and test the Collabora Online functionality.
+```
 
 ## Configure LDAPS Integration for NextCloud
 
 ### From within NextCloud configure the following:
 You must create the __svc_nextcloud__ user accont and the (__OU=Users,OU=MYHQ,DC=mydomain,DC=com__), (__OU=Groups,OU=MYHQ,DC=mydomain,DC=com__), (__OU=Admins,OU=MYHQ,DC=mydomain,DC=com__) Organizational Units prior to completing these steps.
-
+``` bash
 1)  Login to NextCloud as the nextadmin account <br>
 2)  Select Apps, and choose Disabled Apps <br>
 3)  Enable and Download LDAP / AD Integration  <br>
