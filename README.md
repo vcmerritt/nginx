@@ -143,7 +143,10 @@ You must create the __svc_nextcloud__ user accont and the (__OU=Users,OU=MYHQ,DC
 8)  Select Groups Tab, and edit the LDAP Filter to add the following: <br>
     ```  bash
     (&(|(objectclass=organizationalPerson)(objectclass=organizationalUnit)(objectclass=person)(objectclass=top)(objectclass=user))(|(cn=Next_*))) 
+    
+    Note:  Using the filter in step 8 above, only AD groups that begin with Next_ will appear as valid groups in NextCloud.
     ```  
+         
 9)  Select the Advanced Tab <br>
     a)  Expand Directory Settings <br>
     b)  Enter the Search DN's for Users and Groups in the "Base User Tree", and "Base Group Tree" respectively: <br>
@@ -160,6 +163,8 @@ You must create the __svc_nextcloud__ user accont and the (__OU=Users,OU=MYHQ,DC
     d)  Select the CheckBox for "__Nested Groups__". <br>
     e)  Click the "__Test Configuration__" button. <br>
 
-     __Note:__  Using the filter in step 8 above, only AD groups that begin with Next_ will appear as valid groups in NextCloud.
+10)  Select the __Server Tab__ and then click the + sign to add the second domain controller. 
+     (You will need to specify the credentials and baseDN's again just as you did with the first server)
+
 <br>
 <br>
