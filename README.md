@@ -182,8 +182,8 @@ Note:  Don't forget to select the checkbox immediately below the URL in settings
     d)  Select the CheckBox for "__Nested Groups__". <br>
     e)  Click the "__Test Configuration__" button. <br>
 
-10)  Select the __Server Tab__ and then click the + sign to add the second domain controller. 
-     (You will need to specify the credentials and baseDN's again just as you did with the first server)
+10)  Select the __Server Tab__ and then click the + sign to add the second domain controller. <br>
+     (You will need to repeat steps 5-9 for DC02 just as you did with the first server)
 
 <br>
 <br>
