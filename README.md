@@ -146,7 +146,9 @@ You must create the __svc_nextcloud__ user accont and the (__OU=Users,OU=MYHQ,DC
     (&(|(objectclass=organizationalPerson)(objectclass=user)(|(cn=Next_*))))
     ```
     __Windows__
-     ```     (&(|(objectclass=organizationalPerson)(objectclass=organizationalUnit)(objectclass=person)(objectclass=top)(objectclass=user))(|(cn=Next_*))) ```  
+    ```  bash
+    (&(|(objectclass=organizationalPerson)(objectclass=organizationalUnit)(objectclass=person)(objectclass=top)(objectclass=user))(|(cn=Next_*))) 
+    ```  
      
   
      __Note:__  Using the filter in step 8 above, only AD groups that begin with Next_ will appear as valid groups in NextCloud.
