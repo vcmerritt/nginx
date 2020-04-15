@@ -144,9 +144,9 @@ You must create the __svc_nextcloud__ user accont and the (__OU=Users,OU=MYHQ,DC
     ```  bash
     (&(|(objectclass=organizationalPerson)(objectclass=organizationalUnit)(objectclass=person)(objectclass=top)(objectclass=user))(|(cn=Next_*))) 
     ```  
-9)  Select the Advanced Tab
-    a)  Expand Directory Settings
-    b)  Enter the Search DN's for Users and Groups in the "Base User Tree", and "Base Group Tree" respectively:
+9)  Select the Advanced Tab <br>
+    a)  Expand Directory Settings <br>
+    b)  Enter the Search DN's for Users and Groups in the "Base User Tree", and "Base Group Tree" respectively: <br>
     __USERS__
     ``` bash
          OU=Users,OU=MYHQ,DC=mydomain,DC=com
@@ -156,10 +156,10 @@ You must create the __svc_nextcloud__ user accont and the (__OU=Users,OU=MYHQ,DC
     ``` bash
          OU=Groups,OU=MYHQ,DC=mydomain,DC=com
     ```
-    c)  Select "__Member (AD)__" in the __Group-Member association__ selection box.
-    d)  Select the CheckBox for "__Nested Groups__".
-    e)  Click the "__Test Configuration__" button.
-  
+    c)  Select "__Member (AD)__" in the __Group-Member association__ selection box. <br>
+    d)  Select the CheckBox for "__Nested Groups__". <br>
+    e)  Click the "__Test Configuration__" button. <br>
+
      __Note:__  Using the filter in step 8 above, only AD groups that begin with Next_ will appear as valid groups in NextCloud.
 <br>
 <br>
