@@ -144,6 +144,16 @@ You must create the __svc_nextcloud__ user accont and the (__OU=Users,OU=MYHQ,DC
     ```  bash
     (&(|(objectclass=organizationalPerson)(objectclass=organizationalUnit)(objectclass=person)(objectclass=top)(objectclass=user))(|(cn=Next_*))) 
     ```  
+9)  Select the Advanced Tab, and enter the Search DN for Users, and Search DN for groups respectively:
+    __USERS__
+    ``` bash
+         OU=Users,OU=MYHQ,DC=mydomain,DC=com
+         OU=Admins,OU=MYHQ,DC=mydomain,DC=com
+    ```
+    __GROUPS__
+    ``` bash
+         OU=Groups,OU=MYHQ,DC=mydomain,DC=com
+    ```
      
   
      __Note:__  Using the filter in step 8 above, only AD groups that begin with Next_ will appear as valid groups in NextCloud.
