@@ -140,7 +140,7 @@ Note:  Don't forget to select the checkbox immediately below the URL in settings
 
 ### From within NextCloud configure the following:
 You must create the __svc_nextcloud__ user accont and the (__OU=Users,OU=MYHQ,DC=mydomain,DC=com__), (__OU=Groups,OU=MYHQ,DC=mydomain,DC=com__), (__OU=Admins,OU=MYHQ,DC=mydomain,DC=com__) Organizational Units prior to completing these steps.
-``` bash
+
 1)  Login to NextCloud as the nextadmin account <br>
 2)  Select Apps, and choose Disabled Apps <br>
 3)  Enable and Download LDAP / AD Integration  <br>
