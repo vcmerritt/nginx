@@ -108,8 +108,8 @@ https://IPorHostnameofNextCloudServer/nextcloud/         #Make sure you add  the
 ``` bash
 #Modify WOPI Host entries to allow Libre Office Online connections to specific hostnames
 #Change the second and third occurences of mydomain.com to your unique domain name.
-sed -i 's/next.mydomain.com<\/host>/next.mydomain.com<\/host>/g' /etc/loolwsd/loolwsd.xml
 sed -i 's/next.mydomain.com<\/host>/next.mydomain.com<\/host>\n            <host desc="Regex pattern of hostname to allow or deny\." allow="true">nextcloud01\.mydomain\.com<\/host>/g' /etc/loolwsd/loolwsd.xml
+sed -i 's/next.mydomain.com<\/host>/next.mydomain.com<\/host>/g' /etc/loolwsd/loolwsd.xml
 ```
   
 ## Add Collabora Online Server and Set Path to a valid WOPI URL from above
