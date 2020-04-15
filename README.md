@@ -61,8 +61,8 @@ systemctl restart loolwsd
 
 ``` bash
 #Edit the .htaccess file in /var/www/html/nextcloud and add the lines below right under Rewrite On
-sed -i 's/http:/https:/g' config.php
-sed -i 's/https:.*nextcloud'"'\test\g'
+sed -i 's/http:/https:/g' /var/www/html/nextcloud/config/config.php
+sed -i 's/nextcloud.,/nextcloud'\''\'',\n  '"'overwriteprotocol'"' => '"'https'"',/g' /var/www/html/nextcloud/config/config.php
 
 NOTE:  The sed command above modify the following statements in /var/www/html/nextcloud/config/config.php
   'overwrite.cli.url' => 'https://YourIPorFullServerName',       
@@ -72,7 +72,7 @@ NOTE:  The sed command above modify the following statements in /var/www/html/ne
 #MAKE SURE THAT YOU CHANGE THE IPorHOSTNAMEofNextCloudServer to the correct IP
 cat <<EOF > /var/www/html/index.html
 <script>
-window.location = "https://IPorHostNameofNextCloudServer/nextcloud/";   
+window.location = "https://nextcloud.mydomain.com/nextcloud/";   
 </script>
 EOF
 
