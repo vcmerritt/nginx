@@ -61,8 +61,10 @@ systemctl restart loolwsd
 
 ``` bash
 #Edit the .htaccess file in /var/www/html/nextcloud and add the lines below right under Rewrite On
-nano /var/www/html/nextcloud/config/config.php    # Add the following lines right after the datadirectory path.
-  
+sed -i 's/http:/https:/g' config.php
+sed -i 's/https:.*nextcloud'"'\test\g'
+
+NOTE:  The sed command above modify the following statements in /var/www/html/nextcloud/config/config.php
   'overwrite.cli.url' => 'https://YourIPorFullServerName',       
   'overwriteprotocol' => 'https',
 
