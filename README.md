@@ -141,6 +141,11 @@ You must create the __svc_nextcloud__ user accont and the (__OU=Users,OU=MYHQ,DC
      ```     (&(|(objectclass=person))(|(samaccountname=%uid)(|(mailPrimaryAddress=%uid)(mail=%uid))(|(primaryGroupID=%uid)))) ```
 
 8)  Select Groups Tab, and edit the LDAP Filter to add the following: <br>
+    __SAMBA__
+    ``` bash
+    (&(|(objectclass=organizationalPerson)(objectclass=user)(|(cn=Next_*))))
+    ```
+    __Windows__
      ```     (&(|(objectclass=organizationalPerson)(objectclass=organizationalUnit)(objectclass=person)(objectclass=top)(objectclass=user))(|(cn=Next_*))) ```  
      
   
