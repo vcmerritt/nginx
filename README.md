@@ -127,7 +127,8 @@ Navigate to Apps, and add the Collabora Online Server component to nextcloud.  A
 1)  Login to NextCloud as the nextadmin account
 2)  Select Apps, and Add the Collabora Online application
 3)  Select Settings --> Collabora Online and enter https://IPorNameofNextCloudServer
-#When adding the Collabora URL in Settings as per the steps below, make sure it is a valid url from the WOPI sed commands above
+#When adding the Collabora URL in Settings as per the steps below, make sure it is a valid url 
+#from the WOPI sed commands above
 https://ValidWOPIURLfromAbove  (ie. https://nextcloud01.mydomain.com  )
 
 Note:  Don't forget to select the checkbox immediately below the URL in settings to trust certificates if you are using a self-signed certificate.
