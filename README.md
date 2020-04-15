@@ -103,11 +103,21 @@ https://IPorHostnameofNextCloudServer/nextcloud/         #Make sure you add  the
 
 <br>
 
-## Add Collabora App in NextCloud
+## Add WOPI Settings to allow connections to Libre Office Online
+''' bash
+#Modify WOPI Host entries to allow Libre Office Online connections to specific hostnames
+#Change the second and third occurences of mydomain.com to your unique domain name.
+sed -i 's/next.mydomain.com<\/host>/next.mydomain.com<\/host>/g' /etc/loolwsd/loolwsd.xml
+sed -i 's/next.mydomain.com<\/host>/next.mydomain.com<\/host>\n            <host desc="Regex pattern of hostname to allow or deny\." allow="true">nextcloud01\.mydomain\.com<\/host>/g' /etc/loolwsd/loolwsd.xml
+```
+  
+## Add Collabora Online Server and Set Path to a valid WOPI URL from above
 Navigate to Apps, and add the Collabora Online Server component to nextcloud.  After you have added the extension to NextCloud, then go to settings for the Collabora server, and configure the URL to: <br>
 <br>
 
-https://IPorHostnameofNextCloudServer
+``` bash
+#When adding the Collabora URL in Settings, make sure it is a valid url from the WOPI sed commands above
+https://ValidWOPIURLfromAbove  (ie. https://nextcloud01.mydomain.com  )
 
 <br>
 Note:  Don't forget to select the checkbox immediately below the URL in settings to trust certificates if you are using a self-signed certificate.
