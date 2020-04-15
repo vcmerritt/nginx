@@ -80,6 +80,7 @@ EOF
 Install the firewall and configure it to only allow port 443 so that only https is permitted.   Port 80 and the other ports will be blocked after the configuration is performed, except for port 443, and port 22 (ssh) which is added by default.
 ``` bash
 apt-get install iptables iptables-persistent -y
+export PATH=$PATH:/usr/sbin
 iptables -F
 iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
 iptables -A INPUT -i lo -j ACCEPT
