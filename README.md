@@ -110,6 +110,12 @@ https://IPorHostnameofNextCloudServer/nextcloud/         #Make sure you add  the
 #Change the second and third occurences of mydomain.com to your unique domain name.
 sed -i 's/next.mydomain.com<\/host>/next.mydomain.com<\/host>\n            <host desc="Regex pattern of hostname to allow or deny\." allow="true">nextcloud01\.mydomain\.com<\/host>/g' /etc/loolwsd/loolwsd.xml
 sed -i 's/next.mydomain.com<\/host>/next.mydomain.com<\/host>/g' /etc/loolwsd/loolwsd.xml
+
+VALID WOPI URLS added for Collabora by commands above include:
+next.mydomain.com
+nextcloud01.mydomain.com
+
+Note:  You will need to make sure the Collabora path is set to one of these two entries for online document editing to work.
 ```
   
 ## Add Collabora Online Server and Set Path to a valid WOPI URL from above
@@ -117,7 +123,7 @@ Navigate to Apps, and add the Collabora Online Server component to nextcloud.  A
 <br>
 
 ``` bash
-#When adding the Collabora URL in Settings, make sure it is a valid url from the WOPI sed commands above
+#When adding the Collabora URL in Settings as per the steps below, make sure it is a valid url from the WOPI sed commands above
 https://ValidWOPIURLfromAbove  (ie. https://nextcloud01.mydomain.com  )
 
 <br>
