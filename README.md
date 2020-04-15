@@ -104,7 +104,8 @@ https://IPorHostnameofNextCloudServer/nextcloud/         #Make sure you add  the
 <br>
 
 ## Add WOPI Settings to allow connections to Libre Office Online
-''' bash
+
+``` bash
 #Modify WOPI Host entries to allow Libre Office Online connections to specific hostnames
 #Change the second and third occurences of mydomain.com to your unique domain name.
 sed -i 's/next.mydomain.com<\/host>/next.mydomain.com<\/host>/g' /etc/loolwsd/loolwsd.xml
