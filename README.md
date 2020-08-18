@@ -125,7 +125,7 @@ Navigate to Apps, and add the Collabora Online Server component to nextcloud.  A
 ``` bash
 ## Add Collabora Online App to Nextcloud
 1)  Login to NextCloud as the nextadmin account
-2)  Select Apps, and Add the Collabora Online application
+2)  Select Apps, and Add the Collabora Online application (NextCloud 18) or WOPI Client (which shows as Office Online in settings once installed) for NextCloud 19+
 3)  Select Settings --> Collabora Online and enter https://IPorNameofNextCloudServer
 #When adding the Collabora URL in Settings as per the steps below, make sure it is a valid url 
 #from the WOPI sed commands above
